@@ -1,0 +1,99 @@
+Create the following directory structure. (Create empty files where necessary)
+
+dmin-pc@adminpc-Inspiron-5409:~$ mkdir hello
+admin-pc@adminpc-Inspiron-5409:~$ cd hello/
+admin-pc@adminpc-Inspiron-5409:~/hello$ mkdir five one
+admin-pc@adminpc-Inspiron-5409:~/hello$ cd five/
+admin-pc@adminpc-Inspiron-5409:~/hello/five$ mkdir six
+admin-pc@adminpc-Inspiron-5409:~/hello/five$ cd six/
+admin-pc@adminpc-Inspiron-5409:~/hello/five/six$ touch c.txt
+admin-pc@adminpc-Inspiron-5409:~/hello/five/six$ mkdir seven
+admin-pc@adminpc-Inspiron-5409:~/hello/five/six$ cd seven 
+admin-pc@adminpc-Inspiron-5409:~/hello/five/six/seven$ touch error.log
+admin-pc@adminpc-Inspiron-5409:~/hello/five/six/seven$ cd ../../../
+admin-pc@adminpc-Inspiron-5409:~/hello$ cd one/
+admin-pc@adminpc-Inspiron-5409:~/hello/one$ touch a.txt b.txt
+admin-pc@adminpc-Inspiron-5409:~/hello/one$ mkdir two
+admin-pc@adminpc-Inspiron-5409:~/hello/one$ cd teo/
+bash: cd: teo/: No such file or directory
+admin-pc@adminpc-Inspiron-5409:~/hello/one$ cd two/
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two$ touch d.txt
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two$ mkdir three
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two$ cd three
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two/three$ touch e.txt
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two/three$ mkdir four
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two/three$ cd four/
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two/three/four$ touch access.log
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two/three/four$ 
+=========================================================================================
+Delete all the files having the .log extension
+
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two/three/four$ ls -al
+total 8
+drwxrwxr-x 2 admin-pc admin-pc 4096 Nov  3 11:53 .
+drwxrwxr-x 3 admin-pc admin-pc 4096 Nov  3 11:53 ..
+-rw-rw-r-- 1 admin-pc admin-pc    0 Nov  3 11:53 access.log
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two/three/four$ rm -rv *.log
+removed 'access.log'
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two/three/four$ ls -al
+total 8
+drwxrwxr-x 2 admin-pc admin-pc 4096 Nov  3 11:55 .
+drwxrwxr-x 3 admin-pc admin-pc 4096 Nov  3 11:53 ..
+admin-pc@adminpc-Inspiron-5409:~/hello/one/two/three/four$ cd ../../../../
+admin-pc@adminpc-Inspiron-5409:~/hello$ cd five/six/seven/
+admin-pc@adminpc-Inspiron-5409:~/hello/five/six/seven$ ls -al
+total 8
+drwxrwxr-x 2 admin-pc admin-pc 4096 Nov  3 11:51 .
+drwxrwxr-x 3 admin-pc admin-pc 4096 Nov  3 11:51 ..
+-rw-rw-r-- 1 admin-pc admin-pc    0 Nov  3 11:51 error.log
+admin-pc@adminpc-Inspiron-5409:~/hello/five/six/seven$ rm -rv *.log
+removed 'error.log'
+admin-pc@adminpc-Inspiron-5409:~/hello/five/six/seven$ ls -al
+total 8
+drwxrwxr-x 2 admin-pc admin-pc 4096 Nov  3 11:56 .
+drwxrwxr-x 3 admin-pc admin-pc 4096 Nov  3 11:51 ..
+======================================================================================================
+Add the following content to a.txt
+
+admin-pc@adminpc-Inspiron-5409:~/hello/five/six/seven$ cd ../../../
+admin-pc@adminpc-Inspiron-5409:~/hello$ cd one/
+admin-pc@adminpc-Inspiron-5409:~/hello/one$ echo "Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others" >> a.txt
+admin-pc@adminpc-Inspiron-5409:~/hello/one$ cat a.txt
+Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others
+admin-pc@adminpc-Inspiron-5409:~/hello/one$ 
+==================================================================================================
+Delete the directory named five
+
+admin-pc@adminpc-Inspiron-5409:~/hello/one$ cd ../
+admin-pc@adminpc-Inspiron-5409:~/hello$ ls
+five  one
+admin-pc@adminpc-Inspiron-5409:~/hello$ rm -r five
+admin-pc@adminpc-Inspiron-5409:~/hello$ ls
+one
+================================================================================================
+Rename the one directory to uno
+
+admin-pc@adminpc-Inspiron-5409:~/hello$ ls
+one
+admin-pc@adminpc-Inspiron-5409:~/hello$ mv one uno
+admin-pc@adminpc-Inspiron-5409:~/hello$ ls
+uno
+===========================================================================================
+Move a.txt to the two directory
+
+admin-pc@adminpc-Inspiron-5409:~/hello$ ls
+one
+admin-pc@adminpc-Inspiron-5409:~/hello$ mv one uno
+admin-pc@adminpc-Inspiron-5409:~/hello$ ls
+uno
+admin-pc@adminpc-Inspiron-5409:~/hello$ cd uno/
+admin-pc@adminpc-Inspiron-5409:~/hello/uno$ ls
+a.txt  b.txt  two
+admin-pc@adminpc-Inspiron-5409:~/hello/uno$ mv a.txt two
+admin-pc@adminpc-Inspiron-5409:~/hello/uno$ ls
+b.txt  two
+admin-pc@adminpc-Inspiron-5409:~/hello/uno$ cd two/
+admin-pc@adminpc-Inspiron-5409:~/hello/uno/two$ ls
+a.txt  d.txt  three
+
+

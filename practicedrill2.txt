@@ -1,0 +1,67 @@
+admin-pc@adminpc-Inspiron-5409:~/hello/uno/two$ cd ../../../
+admin-pc@adminpc-Inspiron-5409:~$ mkdir pract
+admin-pc@adminpc-Inspiron-5409:~$ ls
+Desktop    Downloads  Music     pract   snap       Videos
+Documents  hello      Pictures  Public  Templates
+admin-pc@adminpc-Inspiron-5409:~$ cd pract
+=============================================================================
+
+Download the contents of "Harry Potter and the Goblet of fire" using the command line from here:
+
+admin-pc@adminpc-Inspiron-5409:~/pract$ man wget
+admin-pc@adminpc-Inspiron-5409:~/pract$ wget https://raw.githubusercontent.com/bobdeng/owlreader/master/ERead/assets/books/Harry%20Potter%20and%20the%20Goblet%20of%20Fire.txt
+--2022-11-03 12:10:14--  https://raw.githubusercontent.com/bobdeng/owlreader/master/ERead/assets/books/Harry%20Potter%20and%20the%20Goblet%20of%20Fire.txt
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 2606:50c0:8000::154, 2606:50c0:8003::154, 2606:50c0:8002::154, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|2606:50c0:8000::154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1140643 (1.1M) [text/plain]
+Saving to: ‘Harry Potter and the Goblet of Fire.txt’
+
+Harry Potter and the  100%[=========================>]   1.09M  2.32MB/s    in 0.5s    
+
+2022-11-03 12:10:17 (2.32 MB/s) - ‘Harry Potter and the Goblet of Fire.txt’ saved [1140643/1140643]
+
+admin-pc@adminpc-Inspiron-5409:~/pract$ ls
+'Harry Potter and the Goblet of Fire.txt'
+=======================================================================================================================
+
+Print the first three lines in the book
+
+admin-pc@adminpc-Inspiron-5409:~/pract$ head 'Harry Potter and the Goblet of Fire.txt' -n 3 >> book
+admin-pc@adminpc-Inspiron-5409:~/pract$ open book
+==================================================================================================================
+
+Print the last 10 lines in the book
+
+admin-pc@adminpc-Inspiron-5409:~/pract$ tail 'Harry Potter and the Goblet of Fire.txt' -n 10 >> book
+admin-pc@adminpc-Inspiron-5409:~/pract$ open book
+================================================================================================================
+How many times do the following words occur in the book?
+
+    Harry
+    Ron
+    Hermione
+    Dumbledore
+
+
+admin-pc@adminpc-Inspiron-5409:~/pract$ grep -o -i Harry book | wc -l
+7
+admin-pc@adminpc-Inspiron-5409:~/pract$ grep -o -i Ron  book | wc -l
+1
+admin-pc@adminpc-Inspiron-5409:~/pract$ grep -o -i Hermione  book | wc -l
+1
+admin-pc@adminpc-Inspiron-5409:~/pract$ grep -o -i Dumbledore  book | wc -l
+1
+===================================================================================================================
+
+Print lines from 100 through 200 in the book
+
+admin-pc@adminpc-Inspiron-5409:~/pract$ sed -n '100,200p' 'Harry Potter and the Goblet of Fire.txt' >> book
+
+==================================================================================================================
+How many unique words are present in the book?
+
+admin-pc@adminpc-Inspiron-5409:~/pract$ open book
+admin-pc@adminpc-Inspiron-5409:~/pract$ tr ' ' '\n' < book|sort|uniq -c|wc -l
+1808
+admin-pc@adminpc-Inspiron-5409:~/pract$ 

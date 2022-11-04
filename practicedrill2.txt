@@ -65,3 +65,363 @@ admin-pc@adminpc-Inspiron-5409:~/pract$ open book
 admin-pc@adminpc-Inspiron-5409:~/pract$ tr ' ' '\n' < book|sort|uniq -c|wc -l
 1808
 admin-pc@adminpc-Inspiron-5409:~/pract$ 
+========================================================================================================================
+
+List your browser's process ids (pid) and parent process ids(ppid)
+
+          admin-pc@adminpc-Inspiron-5409:~$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 05:04 ?        00:00:01 /sbin/init splash
+root           2       0  0 05:04 ?        00:00:00 [kthreadd]
+root           3       2  0 05:04 ?        00:00:00 [rcu_gp]
+root           4       2  0 05:04 ?        00:00:00 [rcu_par_gp]
+root           5       2  0 05:04 ?        00:00:00 [netns]
+root           7       2  0 05:04 ?        00:00:00 [kworker/0:0H-events_highpri
+root          10       2  0 05:04 ?        00:00:00 [mm_percpu_wq]
+root          11       2  0 05:04 ?        00:00:00 [rcu_tasks_rude_]
+root          12       2  0 05:04 ?        00:00:00 [rcu_tasks_trace]
+root          13       2  0 05:04 ?        00:00:00 [ksoftirqd/0]
+root          14       2  0 05:04 ?        00:00:01 [rcu_sched]
+root          15       2  0 05:04 ?        00:00:00 [migration/0]
+root          16       2  0 05:04 ?        00:00:00 [idle_inject/0]
+root          17       2  0 05:04 ?        00:00:00 [cpuhp/0]
+root          18       2  0 05:04 ?        00:00:00 [cpuhp/1]
+root          19       2  0 05:04 ?        00:00:00 [idle_inject/1]
+root          20       2  0 05:04 ?        00:00:00 [migration/1]
+root          21       2  0 05:04 ?        00:00:00 [ksoftirqd/1]
+root          23       2  0 05:04 ?        00:00:00 [kworker/1:0H-events_highpri
+root          24       2  0 05:04 ?        00:00:00 [cpuhp/2]
+root          25       2  0 05:04 ?        00:00:00 [idle_inject/2]
+root          26       2  0 05:04 ?        00:00:00 [migration/2]
+root          27       2  0 05:04 ?        00:00:00 [ksoftirqd/2]
+root          29       2  0 05:04 ?        00:00:00 [kworker/2:0H-events_highpri
+root          30       2  0 05:04 ?        00:00:00 [cpuhp/3]
+root          31       2  0 05:04 ?        00:00:00 [idle_inject/3]
+root          32       2  0 05:04 ?        00:00:00 [migration/3]
+root          33       2  0 05:04 ?        00:00:00 [ksoftirqd/3]
+root          35       2  0 05:04 ?        00:00:00 [kworker/3:0H-events_highpri
+root          36       2  0 05:04 ?        00:00:00 [cpuhp/4]
+root          37       2  0 05:04 ?        00:00:00 [idle_inject/4]
+root          38       2  0 05:04 ?        00:00:00 [migration/4]
+root          39       2  0 05:04 ?        00:00:00 [ksoftirqd/4]
+root          40       2  0 05:04 ?        00:00:00 [kworker/4:0-events]
+root          41       2  0 05:04 ?        00:00:00 [kworker/4:0H-events_highpri
+root          42       2  0 05:04 ?        00:00:00 [cpuhp/5]
+root          43       2  0 05:04 ?        00:00:00 [idle_inject/5]
+root          44       2  0 05:04 ?        00:00:00 [migration/5]
+root          45       2  0 05:04 ?        00:00:00 [ksoftirqd/5]
+root          47       2  0 05:04 ?        00:00:00 [kworker/5:0H-events_highpri
+root          48       2  0 05:04 ?        00:00:00 [cpuhp/6]
+root          49       2  0 05:04 ?        00:00:00 [idle_inject/6]
+root          50       2  0 05:04 ?        00:00:00 [migration/6]
+root          51       2  0 05:04 ?        00:00:00 [ksoftirqd/6]
+root          53       2  0 05:04 ?        00:00:00 [kworker/6:0H-events_highpri
+root          54       2  0 05:04 ?        00:00:00 [cpuhp/7]
+root          55       2  0 05:04 ?        00:00:00 [idle_inject/7]
+root          56       2  0 05:04 ?        00:00:00 [migration/7]
+root          57       2  0 05:04 ?        00:00:00 [ksoftirqd/7]
+root          59       2  0 05:04 ?        00:00:00 [kworker/7:0H-events_highpri
+root          60       2  0 05:04 ?        00:00:00 [kdevtmpfs]
+root          61       2  0 05:04 ?        00:00:00 [inet_frag_wq]
+root          62       2  0 05:04 ?        00:00:00 [kauditd]
+root          63       2  0 05:04 ?        00:00:00 [khungtaskd]
+root          64       2  0 05:04 ?        00:00:00 [oom_reaper]
+root          65       2  0 05:04 ?        00:00:00 [writeback]
+root          66       2  0 05:04 ?        00:00:00 [kcompactd0]
+root          67       2  0 05:04 ?        00:00:00 [ksmd]
+root          68       2  0 05:04 ?        00:00:00 [khugepaged]
+root          75       2  0 05:04 ?        00:00:00 [kworker/1:1-rcu_gp]
+root         115       2  0 05:04 ?        00:00:00 [kintegrityd]
+root         116       2  0 05:04 ?        00:00:00 [kblockd]
+root         117       2  0 05:04 ?        00:00:00 [blkcg_punt_bio]
+root         118       2  0 05:04 ?        00:00:00 [tpm_dev_wq]
+root         119       2  0 05:04 ?        00:00:00 [ata_sff]
+root         120       2  0 05:04 ?        00:00:00 [md]
+root         121       2  0 05:04 ?        00:00:00 [edac-poller]
+root         122       2  0 05:04 ?        00:00:00 [devfreq_wq]
+root         123       2  0 05:04 ?        00:00:00 [watchdogd]
+root         124       2  0 05:04 ?        00:00:00 [kworker/5:1-cgroup_destroy]
+root         126       2  0 05:04 ?        00:00:00 [kworker/0:1H-kblockd]
+root         128       2  0 05:04 ?        00:00:00 [kswapd0]
+root         129       2  0 05:04 ?        00:00:00 [ecryptfs-kthrea]
+root         131       2  0 05:04 ?        00:00:00 [kthrotld]
+root         132       2  0 05:04 ?        00:00:00 [irq/124-pciehp]
+root         135       2  0 05:04 ?        00:00:00 [kworker/4:1-events]
+root         136       2  0 05:04 ?        00:00:00 [kworker/6:1-events]
+root         138       2  0 05:04 ?        00:00:00 [acpi_thermal_pm]
+root         140       2  0 05:04 ?        00:00:00 [vfio-irqfd-clea]
+root         142       2  0 05:04 ?        00:00:00 [mld]
+root         143       2  0 05:04 ?        00:00:00 [kworker/7:1H-events_highpri
+root         144       2  0 05:04 ?        00:00:00 [ipv6_addrconf]
+root         153       2  0 05:04 ?        00:00:00 [kstrp]
+root         156       2  0 05:04 ?        00:00:00 [zswap-shrink]
+root         157       2  0 05:04 ?        00:00:00 [kworker/u17:0-hci0]
+root         164       2  0 05:04 ?        00:00:00 [charger_manager]
+root         186       2  0 05:04 ?        00:00:00 [kworker/1:1H-events_highpri
+root         205       2  0 05:04 ?        00:00:00 [kworker/5:1H-events_highpri
+root         223       2  0 05:04 ?        00:00:00 [nvme-wq]
+root         224       2  0 05:04 ?        00:00:00 [nvme-reset-wq]
+root         225       2  0 05:04 ?        00:00:00 [nvme-delete-wq]
+root         227       2  0 05:04 ?        00:00:01 [kworker/5:2-events]
+root         231       2  0 05:04 ?        00:00:11 [irq/153-DLL09D9]
+root         232       2  0 05:04 ?        00:00:00 [kworker/6:1H-events_highpri
+root         234       2  0 05:04 ?        00:00:00 [kworker/3:1H-events_highpri
+root         235       2  0 05:04 ?        00:00:00 [kworker/2:1H-kblockd]
+root         238       2  0 05:04 ?        00:00:00 [kworker/1:2-mm_percpu_wq]
+root         258       2  0 05:04 ?        00:00:00 [jbd2/nvme0n1p7-]
+root         259       2  0 05:04 ?        00:00:00 [ext4-rsv-conver]
+root         299       1  0 05:04 ?        00:00:00 /lib/systemd/systemd-journal
+root         320       2  0 05:04 ?        00:00:00 [kworker/6:2-rcu_gp]
+root         321       2  0 05:04 ?        00:00:00 [kworker/4:1H-kblockd]
+root         331       1  0 05:04 ?        00:00:00 /lib/systemd/systemd-udevd
+root         357       2  0 05:04 ?        00:00:00 [ipmi-msghandler]
+root         428       2  0 05:04 ?        00:00:00 [kworker/2:3-cgroup_destroy]
+root         437       2  0 05:04 ?        00:00:00 [cfg80211]
+root         444       2  0 05:04 ?        00:00:00 [jbd2/nvme0n1p5-]
+root         445       2  0 05:04 ?        00:00:00 [ext4-rsv-conver]
+root         450       2  0 05:04 ?        00:00:00 [cryptd]
+systemd+     496       1  0 05:04 ?        00:00:02 /lib/systemd/systemd-oomd
+systemd+     497       1  0 05:04 ?        00:00:00 /lib/systemd/systemd-resolve
+systemd+     498       1  0 05:04 ?        00:00:00 /lib/systemd/systemd-timesyn
+root         517       2  0 05:04 ?        00:00:00 [ath10k_wq]
+root         522       2  0 05:04 ?        00:00:00 [kworker/0:4-events]
+root         523       2  0 05:04 ?        00:00:00 [card0-crtc0]
+root         525       2  0 05:04 ?        00:00:00 [card0-crtc1]
+root         526       2  0 05:04 ?        00:00:00 [kworker/7:4-events]
+root         529       2  0 05:04 ?        00:00:00 [ath10k_aux_wq]
+root         530       2  0 05:04 ?        00:00:00 [ath10k_tx_compl]
+root         531       2  0 05:04 ?        00:00:00 [card0-crtc2]
+root         534       2  0 05:04 ?        00:00:00 [card0-crtc3]
+root         592       1  0 05:04 ?        00:00:00 /usr/libexec/accounts-daemon
+root         593       1  0 05:04 ?        00:00:00 /usr/sbin/acpid
+avahi        598       1  0 05:04 ?        00:00:00 avahi-daemon: running [admin
+root         600       1  0 05:04 ?        00:00:00 /usr/sbin/cron -f -P
+message+     602       1  0 05:04 ?        00:00:01 @dbus-daemon --system --addr
+root         604       2  0 05:04 ?        00:00:01 [kworker/u17:2+i915_flip]
+root         605       1  0 05:04 ?        00:00:01 /usr/sbin/NetworkManager --n
+root         647       1  0 05:04 ?        00:00:00 /usr/sbin/irqbalance --foreg
+root         649       1  0 05:04 ?        00:00:00 /usr/bin/python3 /usr/bin/ne
+root         651       1  0 05:04 ?        00:00:01 /usr/libexec/polkitd --no-de
+root         654       1  0 05:04 ?        00:00:00 /usr/libexec/power-profiles-
+syslog       655       1  0 05:04 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         664       1  0 05:04 ?        00:00:03 /usr/lib/snapd/snapd
+root         665       1  0 05:04 ?        00:00:00 /usr/libexec/switcheroo-cont
+root         669       1  0 05:04 ?        00:00:00 /lib/systemd/systemd-logind
+root         670       1  0 05:04 ?        00:00:01 /usr/sbin/thermald --systemd
+root         672       1  0 05:04 ?        00:00:00 /usr/libexec/udisks2/udisksd
+root         673       1  0 05:04 ?        00:00:00 /sbin/wpa_supplicant -u -s -
+avahi        711     598  0 05:04 ?        00:00:00 avahi-daemon: chroot helper
+root         723       1  0 05:04 ?        00:00:00 /usr/lib/bluetooth/bluetooth
+root         725       1  0 05:04 ?        00:00:00 /usr/sbin/cupsd -l
+root         739       1  0 05:04 ?        00:00:00 /usr/sbin/ModemManager
+root         742       1  0 05:04 ?        00:00:00 /usr/libexec/boltd
+root         789       2  0 05:04 ?        00:00:00 [irq/157-AudioDS]
+root         797       1  0 05:04 ?        00:00:00 /usr/sbin/gdm3
+root         804       1  0 05:04 ?        00:00:00 /usr/bin/python3 /usr/share/
+root         884       2  0 05:04 ?        00:00:00 [USBC000:00-con0]
+root         899       1  0 05:04 ?        00:00:00 /usr/libexec/upowerd
+rtkit        913       1  0 05:04 ?        00:00:00 /usr/libexec/rtkit-daemon
+root        1068       1  0 05:05 ?        00:00:01 /usr/libexec/packagekitd
+colord      1213       1  0 05:05 ?        00:00:00 /usr/libexec/colord
+root        1545       1  0 05:05 ?        00:00:00 /usr/sbin/cups-browsed
+kernoops    1551       1  0 05:05 ?        00:00:00 /usr/sbin/kerneloops --test
+kernoops    1562       1  0 05:05 ?        00:00:00 /usr/sbin/kerneloops
+root        1573     797  0 05:05 ?        00:00:00 gdm-session-worker [pam/gdm-
+admin-pc    1582       1  0 05:05 ?        00:00:00 /lib/systemd/systemd --user
+admin-pc    1583    1582  0 05:05 ?        00:00:00 (sd-pam)
+admin-pc    1589    1582  0 05:05 ?        00:00:00 /usr/bin/pipewire
+admin-pc    1590    1582  0 05:05 ?        00:00:00 /usr/bin/pipewire-media-sess
+admin-pc    1591    1582  0 05:05 ?        00:00:00 /usr/bin/pulseaudio --daemon
+admin-pc    1602       1  0 05:05 ?        00:00:00 /usr/bin/gnome-keyring-daemo
+admin-pc    1606    1582  0 05:05 ?        00:00:00 /usr/bin/dbus-daemon --sessi
+admin-pc    1613    1582  0 05:05 ?        00:00:00 /usr/libexec/gvfsd
+admin-pc    1618    1582  0 05:05 ?        00:00:00 /usr/libexec/gvfsd-fuse /run
+admin-pc    1635    1582  0 05:05 ?        00:00:00 /usr/libexec/xdg-document-po
+admin-pc    1640    1582  0 05:05 ?        00:00:00 /usr/libexec/xdg-permission-
+root        1646    1635  0 05:05 ?        00:00:00 fusermount3 -o rw,nosuid,nod
+admin-pc    1660    1582  0 05:05 ?        00:00:00 /usr/libexec/tracker-miner-f
+root        1668       2  0 05:05 ?        00:00:00 [krfcommd]
+admin-pc    1673    1582  0 05:05 ?        00:00:00 /usr/libexec/gvfs-udisks2-vo
+admin-pc    1678    1582  0 05:05 ?        00:00:00 /usr/libexec/gvfs-goa-volume
+admin-pc    1682    1582  0 05:05 ?        00:00:00 /usr/libexec/goa-daemon
+admin-pc    1689    1582  0 05:05 ?        00:00:00 /usr/libexec/goa-identity-se
+admin-pc    1691    1582  0 05:05 ?        00:00:00 /usr/libexec/gvfs-afc-volume
+admin-pc    1700    1582  0 05:05 ?        00:00:00 /usr/libexec/gvfs-gphoto2-vo
+admin-pc    1704    1582  0 05:05 ?        00:00:00 /usr/libexec/gvfs-mtp-volume
+admin-pc    1710    1573  0 05:05 tty2     00:00:00 /usr/libexec/gdm-wayland-ses
+admin-pc    1713    1710  0 05:05 tty2     00:00:00 /usr/libexec/gnome-session-b
+admin-pc    1752    1582  0 05:05 ?        00:00:00 /usr/libexec/gnome-session-c
+admin-pc    1767    1582  0 05:05 ?        00:00:00 /usr/libexec/gnome-session-b
+admin-pc    1790    1767  0 05:05 ?        00:00:00 /usr/libexec/at-spi-bus-laun
+admin-pc    1793    1582  1 05:05 ?        00:00:31 /usr/bin/gnome-shell
+admin-pc    1802    1790  0 05:05 ?        00:00:00 /usr/bin/dbus-daemon --confi
+admin-pc    1864    1582  0 05:05 ?        00:00:00 /usr/libexec/gnome-shell-cal
+admin-pc    1870    1582  0 05:05 ?        00:00:00 /usr/libexec/evolution-sourc
+admin-pc    1877    1582  0 05:05 ?        00:00:00 /usr/libexec/evolution-calen
+admin-pc    1878    1582  0 05:05 ?        00:00:00 /usr/libexec/dconf-service
+admin-pc    1891    1582  0 05:05 ?        00:00:00 /usr/libexec/evolution-addre
+admin-pc    1898    1582  0 05:05 ?        00:00:00 /snap/snapd-desktop-integrat
+admin-pc    1976    1613  0 05:05 ?        00:00:00 /usr/libexec/gvfsd-trash --s
+admin-pc    1988    1582  0 05:05 ?        00:00:00 /usr/libexec/xdg-desktop-por
+admin-pc    1996    1582  0 05:05 ?        00:00:00 /usr/bin/gjs /usr/share/gnom
+admin-pc    1998    1582  0 05:05 ?        00:00:00 /usr/libexec/at-spi2-registr
+admin-pc    1999    1582  0 05:05 ?        00:00:00 /usr/libexec/xdg-desktop-por
+admin-pc    2015    1582  0 05:05 ?        00:00:00 sh -c /usr/bin/ibus-daemon -
+admin-pc    2016    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-a11y-settin
+admin-pc    2017    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-color
+admin-pc    2020    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-datetime
+admin-pc    2025    2015  0 05:05 ?        00:00:00 /usr/bin/ibus-daemon --panel
+admin-pc    2030    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-housekeepin
+admin-pc    2031    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-keyboard
+admin-pc    2032    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-media-keys
+admin-pc    2033    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-power
+admin-pc    2035    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-print-notif
+admin-pc    2039    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-rfkill
+admin-pc    2041    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-screensaver
+admin-pc    2046    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-sharing
+admin-pc    2048    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-smartcard
+admin-pc    2050    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-sound
+admin-pc    2053    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-wacom
+admin-pc    2070    1767  0 05:05 ?        00:00:00 /usr/libexec/evolution-data-
+admin-pc    2103    1767  0 05:05 ?        00:00:00 /usr/libexec/gsd-disk-utilit
+admin-pc    2107    2025  0 05:05 ?        00:00:00 /usr/libexec/ibus-dconf
+admin-pc    2109    2025  0 05:05 ?        00:00:00 /usr/libexec/ibus-extension-
+admin-pc    2145    1582  0 05:05 ?        00:00:00 /usr/libexec/ibus-portal
+admin-pc    2166    1582  0 05:05 ?        00:00:00 /usr/libexec/gsd-printer
+admin-pc    2169    1582  0 05:05 ?        00:00:03 /snap/snap-store/582/usr/bin
+admin-pc    2241    2025  0 05:05 ?        00:00:00 /usr/libexec/ibus-engine-sim
+admin-pc    2292    1582  0 05:05 ?        00:00:00 /usr/libexec/xdg-desktop-por
+admin-pc    2317    1582  0 05:05 ?        00:00:00 /usr/bin/gjs /usr/share/gnom
+root        2388       1  0 05:05 ?        00:00:00 /usr/libexec/fwupd/fwupd
+admin-pc    2400    1582  0 05:05 ?        00:00:00 /usr/libexec/gvfsd-metadata
+admin-pc    2898    1767  0 05:06 ?        00:00:00 update-notifier
+admin-pc    3053    1793  1 05:08 ?        00:00:26 /snap/firefox/2047/usr/lib/f
+admin-pc    3142    1793  0 05:08 ?        00:00:04 /usr/bin/Xwayland :0 -rootle
+admin-pc    3161    1582  0 05:08 ?        00:00:00 /usr/libexec/gsd-xsettings
+admin-pc    3192    1582  0 05:08 ?        00:00:00 /usr/libexec/ibus-x11
+admin-pc    3275    3053  0 05:09 ?        00:00:00 /snap/firefox/2047/usr/lib/f
+admin-pc    3310    3053  0 05:09 ?        00:00:03 /snap/firefox/2047/usr/lib/f
+admin-pc    3353    1582  0 05:09 ?        00:00:00 /usr/bin/snap userd
+admin-pc    3496    3053  0 05:09 ?        00:00:00 /snap/firefox/2047/usr/lib/f
+admin-pc    3902    3053  0 05:09 ?        00:00:05 /snap/firefox/2047/usr/lib/f
+admin-pc    3906    3053  0 05:09 ?        00:00:00 /snap/firefox/2047/usr/lib/f
+admin-pc    3986    3053  0 05:09 ?        00:00:00 /snap/firefox/2047/usr/lib/f
+admin-pc    4023    3053  0 05:09 ?        00:00:00 /snap/firefox/2047/usr/lib/f
+root        4244       2  0 05:30 ?        00:00:00 [kworker/3:0-events]
+root        4252       2  0 05:30 ?        00:00:00 [kworker/u16:10-i915]
+root        4254       2  0 05:30 ?        00:00:00 [kworker/u16:12-i915]
+root        4294       2  0 05:31 ?        00:00:00 [irq/154-mei_me]
+root        4333       2  0 05:31 ?        00:00:00 [kworker/2:1-events]
+root        4347       2  0 05:31 ?        00:00:00 [kworker/0:0]
+root        4456       2  0 05:31 ?        00:00:00 [kworker/7:0-events]
+admin-pc    4508    1582  0 05:31 ?        00:00:02 /snap/code/112/usr/share/cod
+admin-pc    4510    4508  0 05:31 ?        00:00:00 /snap/code/112/usr/share/cod
+admin-pc    4511    4508  0 05:31 ?        00:00:00 /snap/code/112/usr/share/cod
+admin-pc    4523    1582  0 05:31 ?        00:00:00 /snap/code/112/usr/share/cod
+admin-pc    4551    4508  0 05:31 ?        00:00:00 /snap/code/112/usr/share/cod
+admin-pc    4592    4508  2 05:31 ?        00:00:18 /snap/code/112/usr/share/cod
+admin-pc    4643    4510  0 05:31 ?        00:00:04 /snap/code/112/usr/share/cod
+admin-pc    4676    4508  0 05:31 ?        00:00:01 /snap/code/112/usr/share/cod
+admin-pc    4688    4508  0 05:31 ?        00:00:02 /snap/code/112/usr/share/cod
+admin-pc    4706    4688  0 05:31 ?        00:00:00 /snap/code/112/usr/share/cod
+admin-pc    4740    4688  0 05:31 ?        00:00:00 /snap/code/112/usr/share/cod
+root        4802       2  0 05:36 ?        00:00:00 [kworker/u16:0-events_unboun
+root        4803       2  0 05:37 ?        00:00:00 [kworker/3:2-events]
+admin-pc    4846    1793  0 05:39 ?        00:00:00 gjs /usr/share/gnome-shell/e
+root        4900       2  0 05:39 ?        00:00:00 [kworker/5:0-events]
+root        4973       2  0 05:40 ?        00:00:00 [kworker/1:0-events]
+root        4978       2  0 05:40 ?        00:00:00 [kworker/2:0-mm_percpu_wq]
+admin-pc    5001    1582  4 05:43 ?        00:00:00 /usr/libexec/gnome-terminal-
+admin-pc    5019    5001  0 05:43 pts/0    00:00:00 bash
+root        5026       2  0 05:43 ?        00:00:00 [kworker/u16:1-events_unboun
+root        5027       2  0 05:43 ?        00:00:00 [kworker/u16:2]
+admin-pc    5028    5019  0 05:43 pts/0    00:00:00 ps -ef
+admin-pc@adminpc-Inspiron-5409:~$ 
+===============================================================
+Stop the browser application from the command line
+
+admin-pc@adminpc-Inspiron-5409:~$ kill 3053
+admin-pc@adminpc-Inspiron-5409:~$ ps -e| grep "firefox"
+admin-pc@adminpc-Inspiron-5409:~$ 
+==============================================================
+List the top 3 processes by CPU usage.
+
+admin-pc@adminpc-Inspiron-5409:~$ ps aux --sort -%cpu | head -n 4
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+admin-pc    1793  1.7  3.6 5497308 289196 ?      Ssl  05:05   1:10 /usr/bin/gnome-shell
+admin-pc    4592  1.7  2.7 57374504 220000 ?     Sl   05:31   0:43 /snap/code/112/usr/share/code/code --type=renderer --enable-crashpad --crashpad-handler-pid=4523 --enable-crash-reporter=1e83f557-3a7c-42d8-b2c4-99a820a2acb8,no_channel --user-data-dir=/home/admin-pc/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --app-path=/snap/code/112/usr/share/code/resources/app --no-sandbox --no-zygote --enable-blink-features=HighlightAPI --no-sandbox --lang=en-GB --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=8 --launch-time-ticks=1566911066 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,18287560662082909858,5939325538375952846,131072 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --vscode-window-config=vscode:6786433b-f455-4618-ba22-c90f8cad9b15 --enable-crashpad
+admin-pc    5227  1.4  4.0 3460148 319148 ?      Sl   06:02   0:09 /snap/firefox/2047/usr/lib/firefox/firefox
+
+
+========================================================================
+List the top 3 processes by memory usage.
+
+admin-pc@adminpc-Inspiron-5409:~$ ps aux --sort -%mem | head -n 4
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+admin-pc    5227  1.5  4.0 3465144 317452 ?      Sl   06:02   0:08 /snap/firefox/2047/usr/lib/firefox/firefox
+admin-pc    1793  1.5  3.6 5497552 289152 ?      Ssl  05:05   1:03 /usr/bin/gnome-shell
+admin-pc    2169  0.1  2.8 1008548 222432 ?      Sl   05:05   0:04 /snap/snap-store/582/usr/bin/snap-store --gapplication-service
+================================================================================
+Start a Python HTTP server on port 8000
+
+admin-pc@adminpc-Inspiron-5409:~$ python3 -m http.server --cgi 8000
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+127.0.0.1 - - [04/Nov/2022 06:20:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2022 06:20:01] code 404, message File not found
+127.0.0.1 - - [04/Nov/2022 06:20:01] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [04/Nov/2022 06:20:19] "GET /.bash_history HTTP/1.1" 200 -
+127.0.0.1 - - [04/Nov/2022 06:20:19] "GET /.bash_history HTTP/1.1" 200 -
+==============================================================================
+Open another tab. Stop the process you started in the previous step
+
+to open the tab
+admin-pc@adminpc-Inspiron-5409:~$ gnome-terminal --tab
+
+to stop the abouve step: ctrl+c
+
+=========================================================
+Install htop, vim and nginx
+Uninstall nginx
+
+admin-pc@adminpc-Inspiron-5409:~$ sudo apt install vim
+admin-pc@adminpc-Inspiron-5409:~$ sudo apt install htop
+
+=============================================================================================
+
+    What's your local IP address?
+    Find the IP address of google.com
+    How to check if Internet is working using CLI?
+    Where is the node command located? What about code?
+
+
+What's your local IP address?
+   admin-pc@adminpc-Inspiron-5409:~$ ip addr show | grep " inet 192"
+    inet 192.168.29.48/24 brd 192.168.29.255 scope global dynamic noprefixroute wlp44s0
+
+Find the IP address of google.com
+    admin-pc@adminpc-Inspiron-5409:~$ ping google.com
+
+ How to check if Internet is working using CLI?
+     admin-pc@adminpc-Inspiron-5409:~$ ping -c 3 google.com
+PING google.com(maa05s24-in-x0e.1e100.net (2404:6800:4007:81f::200e)) 56 data bytes
+64 bytes from maa05s24-in-x0e.1e100.net (2404:6800:4007:81f::200e): icmp_seq=1 ttl=59 time=19.8 ms
+64 bytes from maa05s24-in-x0e.1e100.net (2404:6800:4007:81f::200e): icmp_seq=2 ttl=59 time=34.7 ms
+64 bytes from maa05s24-in-x0e.1e100.net (2404:6800:4007:81f::200e): icmp_seq=3 ttl=59 time=17.6 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 17.640/24.030/34.658/7.565 ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
